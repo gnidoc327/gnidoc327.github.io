@@ -79,4 +79,4 @@ theme: landscape
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type: git
-  repo: https://github.com/gnidoc327/gnidoc327.github.io
+  repo: git@github.com:gnidoc327/gnidoc327.github.io.git

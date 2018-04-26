@@ -134,6 +134,6 @@ fabric.properties
 modules.xml
 .idea/misc.xml
 *.ipr
-
+.deploy_git
 
 # End of https://www.gitignore.io/api/git,hexo,node,webstorm+all
