@@ -80,3 +80,6 @@ theme: landscape
 deploy:
   type: git
   repo: git@github.com:gnidoc327/gnidoc327.github.io.git
+
+# for Disqus
+disqus_shortname: https-gnidoc327-github-io
