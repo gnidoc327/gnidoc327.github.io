@@ -27,7 +27,6 @@
       <% if (post.comments && config.disqus_shortname){ %>
         <a href="<%- post.permalink %>#disqus_thread" class="article-comment-link"><%= __('comment') %></a>
       <% } %>
-      <span id="view-count">조회수 : <span id="busuanzi_value_site_pv"></span></span>
       <%- partial('post/tag') %>
     </footer>
   </div>
