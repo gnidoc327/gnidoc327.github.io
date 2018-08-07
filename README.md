@@ -40,6 +40,6 @@ More info: [Deployment](https://hexo.io/docs/deployment.html)
 ### node & npm
 
 ```
-node version - 6.11.2
-npm version - 4.2.0
+node version - 8.11.3
+npm version - 5.6.0
 ```
