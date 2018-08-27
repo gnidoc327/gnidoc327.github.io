@@ -67,6 +67,91 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-machine-learning-2" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/08/27/machine-learning-2/" class="article-date">
+  <time datetime="2018-08-27T08:20:56.000Z" itemprop="datePublished">2018-08-27</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/머신러닝-단기집중과정/">머신러닝 단기집중과정</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/08/27/machine-learning-2/">Machine Learning(ML) - ML로 전환하기</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>본 게시물은 <a href="[https://developers.google.com/machine-learning/crash-course/?utm_source=DevRel&utm_medium=StudyJam&utm_campaign=q1y2018&utm_term=&utm_content=mlcc]" title="[구글 머신러닝 단기집중과정 스터디]">구글 머신러닝 단기집중과정 스터디</a>을 참고하여 작성되었습니다.</p>
+<!-- toc -->
+<ul>
+<li><a href="#ml로-전환하기">ML로 전환하기</a><ul>
+<li><a href="#선형-회귀">선형 회귀</a></li>
+</ul>
+</li>
+</ul>
+<!-- tocstop -->
+<h2><span id="ml로-전환하기">ML로 전환하기</span></h2><ul>
+<li>ML로 전환하기? <ul>
+<li>주어진 데이터를 통해서 선형 모델을 만들라는 것(=선형회귀!)</li>
+<li>어떤 문제를 회귀화 기본적인 Flow(흐름)을 파악하자 - Step by Step!</li>
+</ul>
+</li>
+</ul>
+<h3><span id="선형-회귀">선형 회귀</span></h3><ul>
+<li>제일 먼저, 데이터를 그래프로 만들어 검토해야한다</li>
+<li>왜냐? 데이터가 잘못되면 우리가 원하는 모델을 얻을 수 없기 때문!</li>
+<li>예시) 온도별 1분당 귀뚜라미가 우는 횟수 <ul>
+<li>나는 귀뚜라미가 몇번 우는지를 통해서 온도를 알고 싶다!</li>
+<li>데이터를 먼저 좌표로 나타낸다<br><img src="/2018/08/27/machine-learning-2/figure1.JPG" width="400" height="400" alt="Figure 1 : 귀뚜라미가 온도에 따라 1분당 우는 횟수"><br>데이터간의 관계를 보면 온도와 1분당 우는 횟수는 서로 비례하는 관계를 가짐<br>따라서, 이 관계를 근사치로 표현할 수 있는 단 하나의 직선을 만들어 낼 수 있음</li>
+<li>두번째 데이터간의 관계를 근사치로 표현한 직선<br><img src="/2018/08/27/machine-learning-2/figure2.JPG" width="400" height="400" alt="Figure 2 : 근사치 그래프(선형 관계)"><br>근사치로 표현한 직선이 모든 점(데이터)를 통과하지 않지만 대략적인 관계를 보여줌<br>이 그래프(관계)는 어떤 공식(모델의 방정식)으로 나타낼 수 있다 </li>
+<li>직선의 방정식<br><img src="/2018/08/27/machine-learning-2/figure3.JPG" width="400" height="400" alt="Figure 3 : 직선의 방정식"><br>위에서 만든 직선을 수학적으로 공식화한 것<ul>
+<li>y : 온도, 예측하려는 값(우리가 알고 싶은 값)</li>
+<li>m : 선의 기울기</li>
+<li>x : 1분당 우는 횟수, 입력 특성 값(귀뚜라미가 1분에 100번 울었을때 온도를 알고 싶다면? x=100을 입력)</li>
+<li>b : y절편(직선이 y축과 만나는 점)</li>
+</ul>
+</li>
+<li>모델의 방정식<br><img src="/2018/08/27/machine-learning-2/figure4.JPG" width="400" height="400" alt="Figure 4 : 모델의 방정식"><br>위에서 구한 직선의 방정식을 머신러닝의 관습에 맞게 작성한 방정식<ul>
+<li>y’ : 예측된 라벨(얻고자 하는 출력)</li>
+<li>w₁ : 특성1의 가중치. 가중치는 기울기와 같은 개념</li>
+<li>x₁ : 특성1(알려진 입력)</li>
+<li>b : 편향(y절편). w_0\이라고도 표현함</li>
+</ul>
+</li>
+<li>정교한 모델(여러 특성에 의존하는 모델)<br><img src="/2018/08/27/machine-learning-2/figure5.JPG" width="400" height="400" alt="Figure 5 : 3가지 특성에 의존하는 모델의 방정식"><br>만약에 귀뚜라미가 우는 시간/횟수, 나이 3가지 특성에 영향을 받는 경우에는 위와 같은 방정식이 나옴</li>
+</ul>
+</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://gnidoc327.github.io/2018/08/27/machine-learning-2/" data-id="cjlc3f67s0016i8vfs8ey4yrw" class="article-share-link">공유</a>
+      
+        <a href="https://gnidoc327.github.io/2018/08/27/machine-learning-2/#disqus_thread" class="article-comment-link">댓글</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/머신러닝-단기집중과정/">머신러닝 단기집중과정</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-machine-learning-1" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2018/08/20/machine-learning-1/" class="article-date">
@@ -96,8 +181,8 @@
         <p>본 게시물은 <a href="[https://developers.google.com/machine-learning/crash-course/?utm_source=DevRel&utm_medium=StudyJam&utm_campaign=q1y2018&utm_term=&utm_content=mlcc]" title="[구글 머신러닝 단기집중과정 스터디]">구글 머신러닝 단기집중과정 스터디</a>을 참고하여 작성되었습니다.</p>
 <!-- toc -->
 <ul>
-<li><a href="#ml-문제로-표현하기용어-정리">ML 문제로 표현하기(용어 정리)</a><ul>
-<li><a href="#라벨labels">라벨(Labels)</a></li>
+<li><a href="#ml로-전환하기">ML로 전환하기</a><ul>
+<li><a href="#선형-회귀linear-regression">선형 회귀(Linear Regression)</a></li>
 <li><a href="#특성features">특성(Features)</a></li>
 <li><a href="#예examples">예(Examples)</a></li>
 <li><a href="#모델models">모델(Models)</a></li>
@@ -106,8 +191,7 @@
 </li>
 </ul>
 <!-- tocstop -->
-<h2><span id="ml-문제로-표현하기용어-정리">ML 문제로 표현하기(용어 정리)</span></h2><p>  용어정리라서 복붙이 대부분…</p>
-<h3><span id="라벨labels">라벨(Labels)</span></h3><ul>
+<h2><span id="ml로-전환하기">ML로 전환하기</span></h2><h3><span id="선형-회귀linear-regression">선형 회귀(Linear Regression)</span></h3><ul>
 <li>예측하는 항목입니다(단순 선형 회귀의 y 변수)</li>
 <li>ex) 밀의 향후 가격, 사진에 표시되는 동물의 종류, 오디오 클립의 의미</li>
 </ul>
@@ -180,7 +264,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://gnidoc327.github.io/2018/08/20/machine-learning-1/" data-id="cjlbzs5b00000kkvf35xv9m48" class="article-share-link">공유</a>
+      <a data-url="https://gnidoc327.github.io/2018/08/20/machine-learning-1/" data-id="cjlc1fa1a0004i8vfdurjqehk" class="article-share-link">공유</a>
       
         <a href="https://gnidoc327.github.io/2018/08/20/machine-learning-1/#disqus_thread" class="article-comment-link">댓글</a>
       
@@ -322,7 +406,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://gnidoc327.github.io/2018/08/15/new-django-project/" data-id="cjlbzs5ba0006kkvf4kxf1oso" class="article-share-link">공유</a>
+      <a data-url="https://gnidoc327.github.io/2018/08/15/new-django-project/" data-id="cjlc1fa170001i8vf7mzysqos" class="article-share-link">공유</a>
       
         <a href="https://gnidoc327.github.io/2018/08/15/new-django-project/#disqus_thread" class="article-comment-link">댓글</a>
       
@@ -673,7 +757,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://gnidoc327.github.io/2018/08/11/machine-learning-week-0/" data-id="cjlbzs5d1000tkkvft3hm3ey0" class="article-share-link">공유</a>
+      <a data-url="https://gnidoc327.github.io/2018/08/11/machine-learning-week-0/" data-id="cjlc1fa2r000xi8vfbcn8bq18" class="article-share-link">공유</a>
       
         <a href="https://gnidoc327.github.io/2018/08/11/machine-learning-week-0/#disqus_thread" class="article-comment-link">댓글</a>
       
@@ -719,7 +803,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://gnidoc327.github.io/2018/08/07/machine-learning-intro/" data-id="cjlbzs5b40001kkvfayukgbi1" class="article-share-link">공유</a>
+      <a data-url="https://gnidoc327.github.io/2018/08/07/machine-learning-intro/" data-id="cjlc1fa1b0005i8vfeymm1w7p" class="article-share-link">공유</a>
       
         <a href="https://gnidoc327.github.io/2018/08/07/machine-learning-intro/#disqus_thread" class="article-comment-link">댓글</a>
       
@@ -774,7 +858,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://gnidoc327.github.io/2018/04/27/pain/" data-id="cjlbzs5b90005kkvfzinbrhwn" class="article-share-link">공유</a>
+      <a data-url="https://gnidoc327.github.io/2018/04/27/pain/" data-id="cjlc1fa1f000ai8vflo0oz5s8" class="article-share-link">공유</a>
       
         <a href="https://gnidoc327.github.io/2018/04/27/pain/#disqus_thread" class="article-comment-link">댓글</a>
       
@@ -828,7 +912,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://gnidoc327.github.io/2018/04/27/first/" data-id="cjlbzs5b80004kkvf4gdeg3n3" class="article-share-link">공유</a>
+      <a data-url="https://gnidoc327.github.io/2018/04/27/first/" data-id="cjlc1fa130000i8vflk663v7o" class="article-share-link">공유</a>
       
         <a href="https://gnidoc327.github.io/2018/04/27/first/#disqus_thread" class="article-comment-link">댓글</a>
       
@@ -894,6 +978,10 @@
       <ul>
         
           <li>
+            <a href="/2018/08/27/machine-learning-2/">Machine Learning(ML) - ML로 전환하기</a>
+          </li>
+        
+          <li>
             <a href="/2018/08/20/machine-learning-1/">Machine Learning(ML) - ML 문제로 표현하기(용어 정리)</a>
           </li>
         
@@ -907,10 +995,6 @@
         
           <li>
             <a href="/2018/08/07/machine-learning-intro/">머신러닝 스터디 시작</a>
-          </li>
-        
-          <li>
-            <a href="/2018/04/27/pain/">시작부터 고통 받는다....</a>
           </li>
         
       </ul>
