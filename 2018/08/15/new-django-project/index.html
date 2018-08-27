@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>새로운 장고 프로젝트 | GNIDOC의 블로그</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="공부해야지…머신러닝 스터디도 끝났고 애매한 시기… 퇴사 후 python 공부겸 이직 준비겸 fascrap이라는 프로젝트를 할 예정 대략 말하자면, 일정 주기마다 facebook API에서 글을 스크랩하여 유저 간의 필요한 데이터만 수집하여 대시보드를 다시 만들어주는 서비스이다.  지난 1년간 전 회사에서 node, php를 썼는데…node 창시자도 node">
+<meta name="keywords" content="django,node,fascrap">
+<meta property="og:type" content="article">
+<meta property="og:title" content="새로운 장고 프로젝트">
+<meta property="og:url" content="https://gnidoc327.github.io/2018/08/15/new-django-project/index.html">
+<meta property="og:site_name" content="GNIDOC의 블로그">
+<meta property="og:description" content="공부해야지…머신러닝 스터디도 끝났고 애매한 시기… 퇴사 후 python 공부겸 이직 준비겸 fascrap이라는 프로젝트를 할 예정 대략 말하자면, 일정 주기마다 facebook API에서 글을 스크랩하여 유저 간의 필요한 데이터만 수집하여 대시보드를 다시 만들어주는 서비스이다.  지난 1년간 전 회사에서 node, php를 썼는데…node 창시자도 node">
+<meta property="og:locale" content="ko">
+<meta property="og:updated_time" content="2018-08-20T12:37:40.476Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="새로운 장고 프로젝트">
+<meta name="twitter:description" content="공부해야지…머신러닝 스터디도 끝났고 애매한 시기… 퇴사 후 python 공부겸 이직 준비겸 fascrap이라는 프로젝트를 할 예정 대략 말하자면, 일정 주기마다 facebook API에서 글을 스크랩하여 유저 간의 필요한 데이터만 수집하여 대시보드를 다시 만들어주는 서비스이다.  지난 1년간 전 회사에서 node, php를 썼는데…node 창시자도 node">
+  
+    <link rel="alternate" href="/atom.xml" title="GNIDOC의 블로그" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  <script async src = "https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script >
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">GNIDOC의 블로그</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">삽질 컬렉션</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="검색"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://gnidoc327.github.io"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-new-django-project" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/08/15/new-django-project/" class="article-date">
+  <time datetime="2018-08-15T08:20:55.000Z" itemprop="datePublished">2018-08-15</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/etc/">etc</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      새로운 장고 프로젝트
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1><span id="공부해야지">공부해야지…</span></h1><p>머신러닝 스터디도 끝났고 애매한 시기…</p>
+<p>퇴사 후 python 공부겸 이직 준비겸 fascrap이라는 프로젝트를 할 예정</p>
+<p>대략 말하자면, 일정 주기마다 facebook API에서 글을 스크랩하여</p>
+<p>유저 간의 필요한 데이터만 수집하여 대시보드를 다시 만들어주는 서비스이다. </p>
+<h1><span id="지난-1년간-전-회사에서-node-php를-썼는데">지난 1년간 전 회사에서 node, php를 썼는데…</span></h1><p>node 창시자도 node는 노답이라고 도망친 마당에 굳이 더 해야할 필요도 못느끼겠고<br><a href="https://medium.com/@tjholowaychuk/farewell-node-js-4ba9e7f3e52b" target="_blank" rel="noopener">Farewell node.js(블로그 글)</a></p>
+<p>npm의 거지같은 방식과 폐해들(대표적인 kik)<br><a href="https://blog.npmjs.org/post/141577284765/kik-left-pad-and-npm" target="_blank" rel="noopener">kik left npm(블로그 글)</a></p>
+<p>간단히 말하자면 </p>
+<ul>
+<li>Kik라는 회사에서 npm에 등록된 오픈소스인 kik모듈의 이름을 바꿔달라고 했지만</li>
+<li>kik의 소유자는 이를 받아드리지 않았고 Kik에서 npm에 중재를 요청하자 Kik 편을 들어줬고</li>
+<li>npm이 오픈소스에 적합하지 않다고 판단한 kik는 npm에 등록된 자신의 모든 오픈 소스를 삭제</li>
+<li>kik 모듈에 의존성이 있던 모든 모듈들은 깨져버렸고 </li>
+<li>결국 npm에서 같은 기능을 하는 모듈을 같은 이름으로 올려서 해결했다.</li>
+</ul>
+<p>심지어 js를 조금 공부해본 사람이라면 들어봤을 babel에도 kik이 사용되었고</p>
+<p>이처럼 많이 사용하는 대형 모듈들도 박살이 나버렸다.(즉, npm install, update가 되지 않았다!)</p>
+<p>중요한건 문제의 코드는 단 17줄이다.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">module.exports = leftpad;</span><br><span class="line"></span><br><span class="line">function leftpad (str, len, ch) &#123;</span><br><span class="line">  str = String(str);</span><br><span class="line"></span><br><span class="line">  var i = -1;</span><br><span class="line"></span><br><span class="line">  if (!ch &amp;&amp; ch !== 0) ch = &apos; &apos;;</span><br><span class="line"></span><br><span class="line">  len = len - str.length;</span><br><span class="line"></span><br><span class="line">  while (++i &lt; len) &#123;</span><br><span class="line">    str = ch + str;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  return str;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>단순히 글자수를 맞추기 위해서 글자 왼쪽에 임의의 글자를 덧대는 함수이다.</p>
+<p>즉, leftpad(“123”, 5, 0) === 00123 이란 것이다. </p>
+<h1><span id="새삼-느낌점은">새삼 느낌점은</span></h1><p>우린 오픈소스라고 생각하면 되게 대단한 모듈이나 프로젝트를 생각하지만</p>
+<p>사실 저렇게 간단한 것도 만들어서 올려두면 누군가는 쓴다는 것이다.</p>
+<p>아무튼, 전 회사에서 생겼던 문제가 있었는데(올해 겪었던 어이없던 일…)</p>
+<a href="https://github.com/request/request#readme" target="_blank" rel="noopener">node-request</a>모듈(http client)을 사용했었다.<br><br>의존성이 있던 hawk 모듈에서 node version 6에서 사용할 수 없는 코드가 있었고<br><br>이를 확인하지 못하고 request 모듈에서 hawk 버전을 업데이트를 했고<br><br>하루동안 지옥이 펼쳐졌다……<br><br>결국 hawk 버전 업데이트했던 커밋을 Revert했다가<br><a href="https://github.com/request/request/commit/5ba8eb44da7cd639ca21070ea9be20d611b85f66" target="_blank" rel="noopener">Revert 커밋</a>
+<p>local에서 hawk을 직접 구현해서 사용하기에 이르렀다.<br><a href="https://github.com/request/request/commit/a6741d415aba31cd01e9c4544c96f84ea6ed11e3" target="_blank" rel="noopener">hawk local implemenation</a></p>
+<h1><span id="그래서-전-회사에서-생겼던-문제는">그래서 전 회사에서 생겼던 문제는…</span></h1><p>아직도 끔직한 기억인데</p>
+<p>당시에 ^(캐럿)으로 “request”: “^2.8x.0” 이렇게 모듈을 사용하고 있었는데<br>(정확히 몇버전인지 기억이 안나네….)</p>
+<ul>
+<li>package.json에서 패키지 버전 관리 설명<ul>
+<li><a href="https://semver.org/" target="_blank" rel="noopener">SemVer</a>
+<ul>
+<li>npm은 모듈이 따르고 있는 방식<ul>
+<li>0.1.1 -&gt; Major.Minor.Patch</li>
+</ul>
+</li>
+<li>Major 버전은 호환성에 문제가 있는 변경(0.1 -&gt; 1.0)</li>
+<li>Minor 버전은 호환성에 문제가 없는 변경(0.1 -&gt; 0.2)</li>
+<li>Patch 버전은 버그 수정(0.1.1 -&gt; 0.1.2)</li>
+</ul>
+</li>
+<li>틸드(~)<ul>
+<li>~0.0.1 : &gt;=0.0.1 &lt;0.1.0</li>
+<li>~0.1.1 : &gt;=0.1.1 &lt;0.2.0</li>
+<li>~0.1 : &gt;=0.1.0 &lt;0.2.0</li>
+<li>~0 : &gt;=0.0 &lt;1.0</li>
+</ul>
+</li>
+<li>캐럿(^)<ul>
+<li>^1.0.2 : &gt;=1.0.2 &lt;2.0</li>
+<li>^1.0 : &gt;=1.0.0 &lt;2.0</li>
+<li>^1 : &gt;=1.0.0 &lt;2.0</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>너무 생각없이 package를 관리했던 것 같다….</p>
+<p>그래서 생겼던 문제는</p>
+<ul>
+<li>AWS에서 elastic beanstalk을 사용 중인데 이게 오토스케일링(스케일업) 될때마다 npm install을 하는데</li>
+<li>회사에서는 node version 6을 사용 중이었고</li>
+<li>npm에서 캐럿은 해당 모듈의 Minor 버전 중 가장 최근껄로 install/update된다.<ul>
+<li>즉, 저때 문제는 ^2.82.0 -&gt; 2.85.0 으로 적용됨</li>
+</ul>
+</li>
+<li>하필 저 request 모듈이 node version 6에서 문제가 생겨서 스케일업하는데 에러가 발생하고</li>
+<li>당연히 트래픽이 몰려서 스케일업되는건데 스케일업된 서버는 npm install이 되지 않아서 사용되지 못하고</li>
+<li>트래픽 과다로 cpu는 100%로 뛰고 접근은 되지도 않고 elastic beanstalk 자체에서 제공해주는 log 또한 볼 수도 없고</li>
+<li>결국 직접 접근해서 log를 보니 npm install Fail…</li>
+<li>request 버전만 일단 Fix해서 캐럿을 제거하고 다시 릴리즈하고 리스타트…</li>
+<li>살아나길 기도하는 서버 개발자(나)와 대표님….</li>
+<li><del>꼭 장애는 집에 가면 터지더라</del> </li>
+</ul>
+<h1><span id="그-외-문제점">그 외 문제점?</span></h1><p>아무튼 위에서 경험한 큰 일도 있고 </p>
+<p>node 자체도 callback 지옥과 비동기처리 그리고 지옥의 디버깅…</p>
+<p>class 개념이 있지만 애초에 스크립트로 쓰는게 대부분이라 디자인패턴 같은 것도 이론화된걸 찾기 어렵고   </p>
+<p>로그 조차 확실하게 남길 수 없다는 문제도 있다;;<br>(object를 JSON.stringify로 변환했을때 안되는 경우도 있다는거… = 순환의존 문제)</p>
+<p>1년간 써왔지만 적응이 안된다고 해야되나 간단하게는 쓸 수 있지만 </p>
+<p>로직이 복잡해지면 일단 코드가 더러워지고 </p>
+<p>특히 비동기 코드가 들어있다하면 callback 지옥으로 코드를 애초에 간결하게 하기 어렵고</p>
+<p>안그래도 callback이 많아지면 code depth가 깊어져서 점점 코드 보기 어려운데</p>
+<p>접근제한도 없으니 scope 조절하는 걸로 대신하는데 </p>
+<p>문제는 특정 변수의 scope를 알려면 함수 간의 관계를 어느정도 확인해야된다는 것이다.    </p>
+<p>그리고 기본적으로 node는 단일 스레드 구조인데 </p>
+<p>cpu 코어가 2개 이상인 서버에서는 fork해서 최대한 cpu를 활용해야되는데</p>
+<p>비동기처리에는 유리하지만 cpu를 많이 써야하는 작업에는 많이 불리해서</p>
+<p>만약 cpu를 좀 써야될 이슈라면 골치가 아파지는 문제가 있다. </p>
+<p>이 것 외에도 많은 문제가 있는데 적자면 밑도 끝도 없으니 여기까지…</p>
+<h1><span id="결론">결론?</span></h1><p>결국 말하고자 하는건 node를 공부하는건 더 이상 큰 이득이 없다는 것이다.</p>
+<p>부수적인 문제가 너무 많고(위에서 언급한 모듈, 스레드 문제 등등) </p>
+<p>커뮤니티도 좀 정치가 있어서 node 레포를 fork 떠서 다른 이름으로 독립하고 이런 문제들도 있다.</p>
+<p>개발하는데 뭘 이렇게 신경쓸게 많아야 하는지;;</p>
+<p>그리고 학생일때는 간단해서 쓰기 편하다고 생각했는데 </p>
+<p>많이 배워갈수록 “왜 이런건 없지?”, “아 이런 부분은 크리티컬하구나” 같은 언어 레벨의 문제를 겪다보니<br>(예를 들어 한글 인코딩 처리, console.log의 비동기처리, 멀티프로세싱, 기본적인 디자인패턴, 모듈화 문제 등)</p>
+<p>다른거에 눈이 돌아간다.(python, go ㅎㅎ)</p>
+<p>머신러닝을 하면서 python을 사용했는데, 일단 python을 좀 더 고급지게 써보고</p>
+<p>다음은 go를 파볼 예정이다.</p>
+<p>그러니 fascrap 프로젝트를 꼭 성공적으로 완성해야지 ㅎㅎ</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://gnidoc327.github.io/2018/08/15/new-django-project/" data-id="cjlbzs5ba0006kkvf4kxf1oso" class="article-share-link">공유</a>
+      
+        <a href="https://gnidoc327.github.io/2018/08/15/new-django-project/#disqus_thread" class="article-comment-link">댓글</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/django/">django</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/fascrap/">fascrap</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/node/">node</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2018/08/20/machine-learning-1/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">최신</strong>
+      <div class="article-nav-title">
+        
+          Machine Learning(ML) - ML 문제로 표현하기(용어 정리)
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2018/08/11/machine-learning-week-0/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">이전</strong>
+      <div class="article-nav-title">Machine Learning(ML) 첫걸음</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+<section id="comments">
+  <div id="disqus_thread"></div>
+  <script>
+
+    /**
+     *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+     *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+    /*
+    var disqus_config = function () {
+    this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+    this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+    */
+    (function() { // DON'T EDIT BELOW THIS LINE
+      var d = document, s = d.createElement('script');
+      s.src = 'https://gnidoc327-blog.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</section>
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">카테고리</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/etc/">etc</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/hexo/">hexo</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/머신러닝-단기집중과정/">머신러닝 단기집중과정</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">태그</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/django/">django</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/fascrap/">fascrap</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/">hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/node/">node</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/머신러닝-단기집중과정/">머신러닝 단기집중과정</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">태그 클라우드</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/django/" style="font-size: 10px;">django</a> <a href="/tags/fascrap/" style="font-size: 10px;">fascrap</a> <a href="/tags/hexo/" style="font-size: 15px;">hexo</a> <a href="/tags/node/" style="font-size: 10px;">node</a> <a href="/tags/머신러닝-단기집중과정/" style="font-size: 20px;">머신러닝 단기집중과정</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">아카이브</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/08/">8월 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/04/">4월 2018</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">최근 포스트</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2018/08/20/machine-learning-1/">Machine Learning(ML) - ML 문제로 표현하기(용어 정리)</a>
+          </li>
+        
+          <li>
+            <a href="/2018/08/15/new-django-project/">새로운 장고 프로젝트</a>
+          </li>
+        
+          <li>
+            <a href="/2018/08/11/machine-learning-week-0/">Machine Learning(ML) 첫걸음</a>
+          </li>
+        
+          <li>
+            <a href="/2018/08/07/machine-learning-intro/">머신러닝 스터디 시작</a>
+          </li>
+        
+          <li>
+            <a href="/2018/04/27/pain/">시작부터 고통 받는다....</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2018 gnidoc327<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+    <div id="footer-count">
+      <div id="view-count">
+        조회수 : <span id="busuanzi_value_site_pv"></span>
+      </div>
+      <div id="visitor-count">
+        총 방문자 : <span id="busuanzi_value_site_uv"></span>
+      </div>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+<script>
+  var disqus_shortname = 'https-gnidoc327-github-io';
+  
+  var disqus_url = 'https://gnidoc327.github.io/2018/08/15/new-django-project/';
+  
+  (function(){
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+  </div>
+</body>
+</html>
