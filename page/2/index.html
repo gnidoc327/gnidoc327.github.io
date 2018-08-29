@@ -5,20 +5,15 @@
   
 
   
-  <title>새로운 장고 프로젝트 | GNIDOC의 블로그</title>
+  <title>GNIDOC의 블로그</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="공부해야지…머신러닝 스터디도 끝났고 애매한 시기… 퇴사 후 python 공부겸 이직 준비겸 fascrap이라는 프로젝트를 할 예정 대략 말하자면, 일정 주기마다 facebook API에서 글을 스크랩하여 유저 간의 필요한 데이터만 수집하여 대시보드를 다시 만들어주는 서비스이다.  지난 1년간 전 회사에서 node, php를 썼는데…node 창시자도 node">
-<meta name="keywords" content="django,node,fascrap">
-<meta property="og:type" content="article">
-<meta property="og:title" content="새로운 장고 프로젝트">
-<meta property="og:url" content="https://gnidoc327.github.io/2018/08/15/new-django-project/index.html">
+  <meta property="og:type" content="website">
+<meta property="og:title" content="GNIDOC의 블로그">
+<meta property="og:url" content="https://gnidoc327.github.io/page/2/index.html">
 <meta property="og:site_name" content="GNIDOC의 블로그">
-<meta property="og:description" content="공부해야지…머신러닝 스터디도 끝났고 애매한 시기… 퇴사 후 python 공부겸 이직 준비겸 fascrap이라는 프로젝트를 할 예정 대략 말하자면, 일정 주기마다 facebook API에서 글을 스크랩하여 유저 간의 필요한 데이터만 수집하여 대시보드를 다시 만들어주는 서비스이다.  지난 1년간 전 회사에서 node, php를 썼는데…node 창시자도 node">
 <meta property="og:locale" content="ko">
-<meta property="og:updated_time" content="2018-08-20T12:37:40.476Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="새로운 장고 프로젝트">
-<meta name="twitter:description" content="공부해야지…머신러닝 스터디도 끝났고 애매한 시기… 퇴사 후 python 공부겸 이직 준비겸 fascrap이라는 프로젝트를 할 예정 대략 말하자면, 일정 주기마다 facebook API에서 글을 스크랩하여 유저 간의 필요한 데이터만 수집하여 대시보드를 다시 만들어주는 서비스이다.  지난 1년간 전 회사에서 node, php를 썼는데…node 창시자도 node">
+<meta name="twitter:title" content="GNIDOC의 블로그">
   
     <link rel="alternate" href="/atom.xml" title="GNIDOC의 블로그" type="application/atom+xml">
   
@@ -70,7 +65,135 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-new-django-project" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main">
+  
+    <article id="post-machine-learning-1" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/08/20/machine-learning-1/" class="article-date">
+  <time datetime="2018-08-20T06:57:22.000Z" itemprop="datePublished">2018-08-20</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/머신러닝-단기집중과정/">머신러닝 단기집중과정</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/08/20/machine-learning-1/">Machine Learning(ML) - ML 문제로 표현하기(용어 정리)</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>본 게시물은 <a href="[https://developers.google.com/machine-learning/crash-course/?utm_source=DevRel&utm_medium=StudyJam&utm_campaign=q1y2018&utm_term=&utm_content=mlcc]" title="[구글 머신러닝 단기집중과정 스터디]">구글 머신러닝 단기집중과정 스터디</a>을 참고하여 작성되었습니다.</p>
+<!-- toc -->
+<ul>
+<li><a href="#ml로-전환하기">ML로 전환하기</a><ul>
+<li><a href="#선형-회귀linear-regression">선형 회귀(Linear Regression)</a></li>
+<li><a href="#특성features">특성(Features)</a></li>
+<li><a href="#예examples">예(Examples)</a></li>
+<li><a href="#모델models">모델(Models)</a></li>
+<li><a href="#회귀와-분류regression-vs-classification">회귀와 분류(Regression vs classification)</a></li>
+</ul>
+</li>
+</ul>
+<!-- tocstop -->
+<h2><span id="ml로-전환하기">ML로 전환하기</span></h2><h3><span id="선형-회귀linear-regression">선형 회귀(Linear Regression)</span></h3><ul>
+<li>예측하는 항목입니다(단순 선형 회귀의 y 변수)</li>
+<li>ex) 밀의 향후 가격, 사진에 표시되는 동물의 종류, 오디오 클립의 의미</li>
+</ul>
+<h3><span id="특성features">특성(Features)</span></h3><ul>
+<li>입력 변수입니다(단순 선형 회귀의 x 변수)<br><img src="/2018/08/20/machine-learning-1/figure1.png" width="200" height="200" alt="Figure 1 : 여러개의 특성을 식으로 표현"></li>
+<li>ex) 스팸 감지에서 특성 예시<ul>
+<li>이메일 텍스트의 단어</li>
+<li>보내는 사람의 주소</li>
+<li>이메일이 전송된 시간</li>
+<li>‘이상한 속임수 하나’라는 구문이 포함된 이메일</li>
+</ul>
+</li>
+</ul>
+<h3><span id="예examples">예(Examples)</span></h3><ul>
+<li>데이터(<strong>x</strong>)의 특정 인스턴스입니다. <strong>x</strong>는 벡터라는 것을 나타내기 위해 굵게 표시합니다. 예는 두 카테고리로 구분됩니다.</li>
+<li><p>구분</p>
+<ul>
+<li><p>라벨이 있는 예 : 특성과 라벨이 모두 포함</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">labeled examples: &#123;features, label&#125;: (x, y)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>라벨이 없는 예 : 특성은 포함되지만 라벨은 포함안함</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">unlabeled examples: &#123;features, ?&#125;: (x, ?)</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p>모델을 학습시키려면 라벨이 있는 예를 사용!</p>
+</li>
+<li>라벨이 있는 예로 모델을 학습시킨 다음 해당 모델을 사용하여 라벨이 없는 예의 라벨을 예측<ul>
+<li>쉽게말하면, 결과를 아는 데이터(라벨이 있는 예)로 모델(예측 모델)을 만들어서<br>결과를 모르는 데이터(라벨이 없는 예)를 모델에 대입하여 값을 도출</li>
+</ul>
+</li>
+</ul>
+<h3><span id="모델models">모델(Models)</span></h3><ul>
+<li>모델은 특성과 라벨의 관계를 정의</li>
+<li>모델 수명의 두단계<ol>
+<li>학습<ul>
+<li>모델을 만들거나 배우는 것을 의미합니다. </li>
+<li>즉, 라벨이 있는 예를 모델에 보여 주고, 모델이 특성과 라벨의 관계를 점차적으로 학습하도록 합니다.</li>
+</ul>
+</li>
+<li>추론<ul>
+<li>학습된 모델을 라벨이 없는 예에 적용하는 것을 의미합니다. </li>
+<li>즉 학습된 모델을 사용하여 유용한 예측(y’)을 해냅니다.</li>
+</ul>
+</li>
+</ol>
+</li>
+</ul>
+<h3><span id="회귀와-분류regression-vs-classification">회귀와 분류(Regression vs classification)</span></h3><ul>
+<li>회귀 모델<ul>
+<li>연속적인 값을 예측(실수범위, 정수범위 등등)</li>
+<li>예시) <ul>
+<li>캘리포니아의 주택 가격이 얼마인가요?</li>
+<li>사용자가 이 광고를 클릭할 확률이 얼마인가요?</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>분류 모델<ul>
+<li>불연속적인 값을 예측(true/false, 0/1 등등)</li>
+<li>예시)<ul>
+<li>주어진 이메일 메시지가 스팸인가요, 스팸이 아닌가요?</li>
+<li>이 이미지가 강아지, 고양이 또는 햄스터의 이미지인가요?</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://gnidoc327.github.io/2018/08/20/machine-learning-1/" data-id="cjlet23260001hgvf4vo3su2t" class="article-share-link">공유</a>
+      
+        <a href="https://gnidoc327.github.io/2018/08/20/machine-learning-1/#disqus_thread" class="article-comment-link">댓글</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/머신러닝-단기집중과정/">머신러닝 단기집중과정</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-new-django-project" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2018/08/15/new-django-project/" class="article-date">
   <time datetime="2018-08-15T08:20:55.000Z" itemprop="datePublished">2018-08-15</time>
@@ -87,8 +210,8 @@
       <header class="article-header">
         
   
-    <h1 class="article-title" itemprop="name">
-      새로운 장고 프로젝트
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/08/15/new-django-project/">새로운 장고 프로젝트</a>
     </h1>
   
 
@@ -208,52 +331,17 @@
     </footer>
   </div>
   
-    
-<nav id="article-nav">
-  
-    <a href="/2018/08/20/machine-learning-1/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">최신</strong>
-      <div class="article-nav-title">
-        
-          Machine Learning(ML) - ML 문제로 표현하기(용어 정리)
-        
-      </div>
-    </a>
-  
-  
-    <a href="/2018/08/11/machine-learning-week-0/" id="article-nav-older" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">이전</strong>
-      <div class="article-nav-title">Machine Learning(ML) 첫걸음</div>
-    </a>
-  
-</nav>
-
-  
 </article>
 
 
-<section id="comments">
-  <div id="disqus_thread"></div>
-  <script>
+  
 
-    /**
-     *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-     *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
-    /*
-    var disqus_config = function () {
-    this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
-    this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-    };
-    */
-    (function() { // DON'T EDIT BELOW THIS LINE
-      var d = document, s = d.createElement('script');
-      s.src = 'https://gnidoc327-blog.disqus.com/embed.js';
-      s.setAttribute('data-timestamp', +new Date());
-      (d.head || d.body).appendChild(s);
-    })();
-  </script>
-  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-</section>
+
+  <nav id="page-nav">
+    
+    <a class="extend prev" rel="prev" href="/">&laquo; 이전</a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><a class="extend next" rel="next" href="/page/3/">다음 &raquo;</a>
+  </nav>
+
 </section>
         
           <aside id="sidebar">
@@ -360,13 +448,11 @@
 <script>
   var disqus_shortname = 'https-gnidoc327-github-io';
   
-  var disqus_url = 'https://gnidoc327.github.io/2018/08/15/new-django-project/';
-  
   (function(){
     var dsq = document.createElement('script');
     dsq.type = 'text/javascript';
     dsq.async = true;
-    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    dsq.src = '//' + disqus_shortname + '.disqus.com/count.js';
     (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
   })();
 </script>

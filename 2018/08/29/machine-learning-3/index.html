@@ -5,15 +5,27 @@
   
 
   
-  <title>GNIDOC의 블로그</title>
+  <title>Machine Learning(ML) - 손실 줄이기 | GNIDOC의 블로그</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="GNIDOC의 블로그">
-<meta property="og:url" content="https://gnidoc327.github.io/index.html">
+  <meta name="description" content="본 게시물은 구글 머신러닝 단기집중과정 스터디을 참고하여 작성되었습니다.   손실 줄이기(Reducing Loss) 반복학습(Iterative learning) 머신러닝 알고리즘 매개변수 업데이트 계산? 경사하강법(Gradient Descent) 학습률(Learning Rate) 확률적 경사하강법(Stochastic Gradient Descent)">
+<meta name="keywords" content="머신러닝 단기집중과정">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Machine Learning(ML) - 손실 줄이기">
+<meta property="og:url" content="https://gnidoc327.github.io/2018/08/29/machine-learning-3/index.html">
 <meta property="og:site_name" content="GNIDOC의 블로그">
+<meta property="og:description" content="본 게시물은 구글 머신러닝 단기집중과정 스터디을 참고하여 작성되었습니다.   손실 줄이기(Reducing Loss) 반복학습(Iterative learning) 머신러닝 알고리즘 매개변수 업데이트 계산? 경사하강법(Gradient Descent) 학습률(Learning Rate) 확률적 경사하강법(Stochastic Gradient Descent)">
 <meta property="og:locale" content="ko">
+<meta property="og:image" content="https://gnidoc327.github.io/2018/08/27/machine-learning-2/figure2.JPG">
+<meta property="og:image" content="https://gnidoc327.github.io/2018/08/29/machine-learning-3/figure1.JPG">
+<meta property="og:image" content="https://gnidoc327.github.io/2018/08/29/machine-learning-3/figure2.JPG">
+<meta property="og:image" content="https://gnidoc327.github.io/2018/08/29/machine-learning-3/figure3.JPG">
+<meta property="og:image" content="https://gnidoc327.github.io/2018/08/29/machine-learning-3/figure4.JPG">
+<meta property="og:image" content="https://gnidoc327.github.io/2018/08/29/machine-learning-3/figure5.JPG">
+<meta property="og:updated_time" content="2018-08-29T11:19:05.330Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="GNIDOC의 블로그">
+<meta name="twitter:title" content="Machine Learning(ML) - 손실 줄이기">
+<meta name="twitter:description" content="본 게시물은 구글 머신러닝 단기집중과정 스터디을 참고하여 작성되었습니다.   손실 줄이기(Reducing Loss) 반복학습(Iterative learning) 머신러닝 알고리즘 매개변수 업데이트 계산? 경사하강법(Gradient Descent) 학습률(Learning Rate) 확률적 경사하강법(Stochastic Gradient Descent)">
+<meta name="twitter:image" content="https://gnidoc327.github.io/2018/08/27/machine-learning-2/figure2.JPG">
   
     <link rel="alternate" href="/atom.xml" title="GNIDOC의 블로그" type="application/atom+xml">
   
@@ -65,9 +77,7 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main">
-  
-    <article id="post-machine-learning-3" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-machine-learning-3" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2018/08/29/machine-learning-3/" class="article-date">
   <time datetime="2018-08-29T07:06:06.000Z" itemprop="datePublished">2018-08-29</time>
@@ -84,8 +94,8 @@
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/08/29/machine-learning-3/">Machine Learning(ML) - 손실 줄이기</a>
+    <h1 class="article-title" itemprop="name">
+      Machine Learning(ML) - 손실 줄이기
     </h1>
   
 
@@ -219,102 +229,43 @@
     </footer>
   </div>
   
-</article>
-
-
+    
+<nav id="article-nav">
   
-    <article id="post-machine-learning-2" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2018/08/27/machine-learning-2/" class="article-date">
-  <time datetime="2018-08-27T08:20:56.000Z" itemprop="datePublished">2018-08-27</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/머신러닝-단기집중과정/">머신러닝 단기집중과정</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/08/27/machine-learning-2/">Machine Learning(ML) - ML로 전환하기</a>
-    </h1>
+    <a href="/2018/08/27/machine-learning-2/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">이전</strong>
+      <div class="article-nav-title">Machine Learning(ML) - ML로 전환하기</div>
+    </a>
   
+</nav>
 
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>본 게시물은 <a href="[https://developers.google.com/machine-learning/crash-course/?utm_source=DevRel&utm_medium=StudyJam&utm_campaign=q1y2018&utm_term=&utm_content=mlcc]" title="[구글 머신러닝 단기집중과정 스터디]">구글 머신러닝 단기집중과정 스터디</a>을 참고하여 작성되었습니다.</p>
-<!-- toc -->
-<ul>
-<li><a href="#ml로-전환하기">ML로 전환하기</a><ul>
-<li><a href="#선형-회귀">선형 회귀</a></li>
-</ul>
-</li>
-</ul>
-<!-- tocstop -->
-<h2><span id="ml로-전환하기">ML로 전환하기</span></h2><ul>
-<li>ML로 전환하기? <ul>
-<li>주어진 데이터를 통해서 선형 모델을 만들라는 것(=선형회귀!)</li>
-<li>어떤 문제를 회귀화 기본적인 Flow(흐름)을 파악하자 - Step by Step!</li>
-</ul>
-</li>
-</ul>
-<h3><span id="선형-회귀">선형 회귀</span></h3><ul>
-<li>제일 먼저, 데이터를 그래프로 만들어 검토해야한다</li>
-<li>왜냐? 데이터가 잘못되면 우리가 원하는 모델을 얻을 수 없기 때문!</li>
-<li>예시) 온도별 1분당 귀뚜라미가 우는 횟수 <ul>
-<li>나는 귀뚜라미가 몇번 우는지를 통해서 온도를 알고 싶다!</li>
-<li>데이터를 먼저 좌표로 나타낸다<br><img src="/2018/08/27/machine-learning-2/figure1.JPG" width="400" height="400" alt="Figure 1 : 귀뚜라미가 온도에 따라 1분당 우는 횟수"><br>데이터간의 관계를 보면 온도와 1분당 우는 횟수는 서로 비례하는 관계를 가짐<br>따라서, 이 관계를 근사치로 표현할 수 있는 단 하나의 직선을 만들어 낼 수 있음</li>
-<li>두번째 데이터간의 관계를 근사치로 표현한 직선<br><img src="/2018/08/27/machine-learning-2/figure2.JPG" width="400" height="400" alt="Figure 2 : 근사치 그래프(선형 관계)"><br>근사치로 표현한 직선이 모든 점(데이터)를 통과하지 않지만 대략적인 관계를 보여줌<br>이 그래프(관계)는 어떤 공식(모델의 방정식)으로 나타낼 수 있다 </li>
-<li>직선의 방정식<br><img src="/2018/08/27/machine-learning-2/figure3.JPG" width="200" height="200" alt="Figure 3 : 직선의 방정식"><br>위에서 만든 직선을 수학적으로 공식화한 것<ul>
-<li>y : 온도, 예측하려는 값(우리가 알고 싶은 값)</li>
-<li>m : 선의 기울기</li>
-<li>x : 1분당 우는 횟수, 입력 특성 값(귀뚜라미가 1분에 100번 울었을때 온도를 알고 싶다면? x=100을 입력)</li>
-<li>b : y절편(직선이 y축과 만나는 점)</li>
-</ul>
-</li>
-<li>모델의 방정식<br><img src="/2018/08/27/machine-learning-2/figure4.JPG" width="200" height="200" alt="Figure 4 : 모델의 방정식"><br>위에서 구한 직선의 방정식을 머신러닝의 관습에 맞게 작성한 방정식<ul>
-<li>y’ : 예측된 라벨(얻고자 하는 출력)</li>
-<li>w₁ : 특성1의 가중치. 가중치는 기울기와 같은 개념</li>
-<li>x₁ : 특성1(알려진 입력)</li>
-<li>b : 편향(y절편). w_0\이라고도 표현함</li>
-</ul>
-</li>
-<li>정교한 모델(여러 특성에 의존하는 모델)<br><img src="/2018/08/27/machine-learning-2/figure5.JPG" width="200" height="200" alt="Figure 5 : 3가지 특성에 의존하는 모델의 방정식"><br>만약에 귀뚜라미가 우는 시간/횟수, 나이 3가지 특성에 영향을 받는 경우에는 위와 같은 방정식이 나옴</li>
-</ul>
-</li>
-</ul>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://gnidoc327.github.io/2018/08/27/machine-learning-2/" data-id="cjlet232g000ahgvfi05wb205" class="article-share-link">공유</a>
-      
-        <a href="https://gnidoc327.github.io/2018/08/27/machine-learning-2/#disqus_thread" class="article-comment-link">댓글</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/머신러닝-단기집중과정/">머신러닝 단기집중과정</a></li></ul>
-
-    </footer>
-  </div>
   
 </article>
 
 
-  
+<section id="comments">
+  <div id="disqus_thread"></div>
+  <script>
 
-
-  <nav id="page-nav">
-    
-    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><a class="extend next" rel="next" href="/page/2/">다음 &raquo;</a>
-  </nav>
-
+    /**
+     *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+     *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+    /*
+    var disqus_config = function () {
+    this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+    this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+    */
+    (function() { // DON'T EDIT BELOW THIS LINE
+      var d = document, s = d.createElement('script');
+      s.src = 'https://gnidoc327-blog.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</section>
 </section>
         
           <aside id="sidebar">
@@ -421,11 +372,13 @@
 <script>
   var disqus_shortname = 'https-gnidoc327-github-io';
   
+  var disqus_url = 'https://gnidoc327.github.io/2018/08/29/machine-learning-3/';
+  
   (function(){
     var dsq = document.createElement('script');
     dsq.type = 'text/javascript';
     dsq.async = true;
-    dsq.src = '//' + disqus_shortname + '.disqus.com/count.js';
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
     (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
   })();
 </script>
